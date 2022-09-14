@@ -68,6 +68,15 @@ resource "oci_core_security_list" "security_list_for_ampere" {
       min = 443
     }
   }
+  ingress_security_rules {
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    description = "RDP port"
+    tcp_options {
+      max = var.rdp_port
+      min = var.rdp_port
+    }
+  }
   egress_security_rules {
     protocol    = "all"
     destination = "0.0.0.0/0"

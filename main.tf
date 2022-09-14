@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket                      = "terraform-backend"
     key                         = "ampere/terraform.tfstate"
-    profile                     = "default"
+    profile                     = "oci_s3"
     region                      = "ap-tokyo-1"
     endpoint                    = "https://nr7eduszgfzb.compat.objectstorage.ap-tokyo-1.oraclecloud.com"
     skip_region_validation      = true

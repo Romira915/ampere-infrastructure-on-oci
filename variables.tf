@@ -34,3 +34,8 @@ variable "instance_ssh_port" {
   type    = number
   default = 22
 }
+
+variable "rdp_port" {
+  type = number
+  default = 3389
+}
